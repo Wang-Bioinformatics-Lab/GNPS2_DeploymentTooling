@@ -1,4 +1,6 @@
 USERNAME ?= $(shell bash -c 'read -p "Please enter your username.  To avoid entering this each time please update USERNAME field in the Makefile.credentials file in the directory root to your username.  " pwd; echo $$pwd')
 
 deploy-prod:
-    echo MING
+	fab2 -H ${USERNAME}@ucr-gnps2 \
+	--prompt-for-login-password \
+	deploy-workflow "../workflowinput.yaml"
