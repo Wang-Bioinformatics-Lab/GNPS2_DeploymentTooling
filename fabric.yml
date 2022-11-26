@@ -1,0 +1,6 @@
+debug: true
+run:
+  warn: true
+  echo: true
+paths:
+  workflows: /data/nf_data/server/env/workflows
