@@ -48,12 +48,12 @@ def deploy_workflow(c, path_to_workflow):
 
     # Prepping workflow on the remote side
     if exists(c, target_workflow_folder):
-        print("Workflow Exists on Remote Server")
+        print("Workflow {} Exists on Remote Server".format(workflow_name))
         input_val = input('Continue y/n: ')
         if input_val != "y":
             exit(0)
     else:
-        print("Workflow Does not exist on Remote Server")
+        print("Workflow {} Does not exist on Remote Server".format(workflow_name))
         input_val = input('Continue y/n: ')
         if input_val != "y":
             exit(0)
