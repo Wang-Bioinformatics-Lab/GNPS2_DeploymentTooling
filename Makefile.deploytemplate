@@ -2,5 +2,4 @@ USERNAME ?= $(shell bash -c 'read -p "Please enter your username.  To avoid ente
 
 deploy-prod:
 	fab2 -H ${USERNAME}@ucr-gnps2 \
-	--prompt-for-login-password \
 	deploy-workflow ".."
