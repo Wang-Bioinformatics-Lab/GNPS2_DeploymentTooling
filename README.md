@@ -4,4 +4,6 @@ This is the README for the GNPS Workflows deployment tooling. The goal of this r
 
 ```
 fabric2
+patchwork
+pyyaml
 ```
