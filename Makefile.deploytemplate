@@ -7,3 +7,7 @@ deploy-prod:
 deploy-beta:
 	fab2 -H ${USERNAME}@ucr-gnps2-beta \
 	deploy-workflow ".."
+
+deploy-dev:
+	fab2 -H ${USERNAME}@ucr-gnps2-dev \
+	deploy-workflow ".."
