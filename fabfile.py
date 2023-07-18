@@ -70,9 +70,11 @@ def deploy_workflow(c, path_to_workflow):
         remote_file = os.path.join(REMOTE_WORKFLOW_DIR, workflow_name, filename)
         if os.path.isdir(local_file):
             update_folder(c, local_file, remote_file)
+            update_permissions(c, remote_file, "777")
             print("Copying Folder ", local_file, " to ", remote_file)
         else:
             update_file(c, local_file, remote_file)
+            update_permissions(c, remote_file, "777")
             print("Copying File ", local_file, " to ", remote_file)
         
     #print(c["paths"]["workflows"])
@@ -84,6 +86,9 @@ def update_file(c, local_path, final_path, ):
     except:
         c.put(local_path, final_path, preserve_mode=False)
 
+def update_permissions(c, remote_file, permissions):
+    # This is to run chmod on the file
+    c.run("chmod -R {} {}".format(permissions, remote_file))
 
 # Utility function to update an entire folder
 def update_folder(c, local_path, final_path):
