@@ -7,3 +7,14 @@ fabric2
 patchwork
 pyyaml
 ```
+
+
+## SSH Config
+
+You need to update your ssh config to include the following:
+
+```
+Host ucr-gnps2
+    Hostname gnps2.org
+    User user
+```
