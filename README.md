@@ -11,7 +11,7 @@ pyyaml
 
 ## SSH Config
 
-You need to update your ssh config to include the following:
+You need to update your ssh config file in the ~/home/.ssh/ folder to include the following:
 
 ```
 Host ucr-gnps2
