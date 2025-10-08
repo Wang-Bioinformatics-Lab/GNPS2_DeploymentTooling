@@ -11,3 +11,8 @@ deploy-beta:
 deploy-dev:
 	fab2 -H ${USERNAME}@ucr-gnps2-dev \
 	deploy-workflow ".."
+
+deploy-test:
+	fab2 -H ${USERNAME}@ucr-gnps2-test \
+	deploy-workflow ".."
+
