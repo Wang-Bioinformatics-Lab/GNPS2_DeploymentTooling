@@ -12,6 +12,14 @@ deploy-dev:
 	fab2 -H ${USERNAME}@ucr-gnps2-dev \
 	deploy-workflow ".."
 
+deploy-de:
+	fab2 -H ${USERNAME}@ucr-gnps2-br \
+	deploy-workflow ".."
+
+deploy-br:
+	fab2 -H ${USERNAME}@ucr-gnps2-br \
+	deploy-workflow ".."
+
 deploy-test:
 	fab2 -H ${USERNAME}@ucr-gnps2-test \
 	deploy-workflow ".."
